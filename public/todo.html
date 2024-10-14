@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoneZone</title>
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/main.min.css'>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li>
+                    <p><img src="./images/logo.png" id="logo"> Docket.io</p>
+                </li>
+                <li>
+                    <div class="side-but">
+                        <a href="https://x.com/SwayamAgga1408" target="_blank"><button id="tw"><i class="fab fa-twitter"></i>Twitter</button></a>
+                         <a href="https://github.com/Swayam0407" target="_blank"><button id="git"><i class="fab fa-github"></i>Github</button></a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="hero">
+            <div class="sidebar">
+                 <div class="profile">
+                    <div class="pic">
+                        <img class="avatar" alt="User Avatar"/>
+                    </div>
+                    <div class="name"></div>
+                 </div>
+                 <button id="showCalendarButton" onclick="showCalendar()">Show Calendar</button>            </div>
+            <div class="main">
+                <!-- Hamburger Menu Icon -->
+<div id="hamburger" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+</div>
+
+                <div class="greeting">
+                    <p></p>
+                </div>
+                <div class="card-cont">
+                    <div class="card all">
+                        <div class="title">
+                            <div class="tit-left"><i class="fa-solid fa-calendar"></i><p>All Tasks</p></div>
+                            <div class="tit-right"><button class="add-task-but" onclick="showModal()">Add Task<i class="fa-solid fa-circle-plus"></i></button></div>
+                        </div>
+                        <div class="tasks-container">
+                        </div>
+                    </div>
+                    <div class="card inprog">
+                        <div class="title2">
+                            <div class="tit-left"><i class="fa-solid fa-bars-progress"></i><p>In Progress</p></div>
+                            <div class="tit-right"><button class="add-task-but" onclick="showModal()">Add Task<i class="fa-solid fa-circle-plus"></i></button></div>
+                        </div>
+                        <div class="list-inprog"></div>
+                    </div>
+                    <div class="card completed">
+                        <div class="title3">
+                            <div class="tit-left"><i class="fa-regular fa-circle-check"></i><p>Completed</p></div>
+                            <div class="tit-right"><button class="add-task-but"onclick="showModal()">Add Task<i class="fa-solid fa-circle-plus"></i></button></div>
+                        </div>
+                        <div class="list-completed"></div>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </div>
+
+    <!-- Modal for adding task -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form id="todoForm" onsubmit="addOrUpdateTodo(event)">
+                <input type="hidden" id="taskId" name="taskId">
+                <label for="taskname">Add Task</label>
+                <input type="text" placeholder="Enter Title.." name="taskname" id="taskname" required>
+                <label for="details">Add Details</label>
+                <input type="text" placeholder="optional.." name="details" id="details" >
+                <label for="due">Due</label>
+                <input type="date" name="due" id="due" required>
+                <label for="urgency">Urgency</label>
+                <select name="urgency" id="urgency" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
+         <!-- Modal for Calendar -->
+<div id="calendarModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeCalendar()">&times;</span>
+        <div id="calendar"></div>
+    </div>
+</div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

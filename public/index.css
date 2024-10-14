@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
+html {
+    height: auto;
+    width: 100%;
+    min-height: 100%; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    background-color: #1c1c1c;
+    margin: 0;
+    min-height: 100%; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #2C2C2C;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFD966;
+    display: flex; 
+    align-items: center; 
+    margin: 0;
+}
+
+.navbar ul { 
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+
+#logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px; 
+}
+
+.fab{
+    margin-right: 5px;
+}
+
+.hero {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #252525;
+    width: 300px;
+    height: 100%;
+}
+
+.profile {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #2D2D2D; /* Dark, sleek background */
+    color: #FFFFFF; /* White text for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    border: 2px solid #444444; /* Subtle border for structure */
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: centre;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-wrap: wrap;
+    
+}
+
+.side-but {
+    display: flex;
+    gap: 40px; 
+}
+
+.side-but a {
+    text-decoration: none; 
+}
+
+button {
+    padding: 5px;
+    height: 40px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border: none; 
+    color: white; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px; 
+    text-align: center; 
+    width:100px;
+    outline: none;
+}
+
+#tw{
+    background-color:#A89FD6;
+}
+
+#git{
+    background-color:#F65C44;
+}
+
+.main {
+    background-color: #333333;
+    height: 100%;
+    width: 100%; /* Full width */
+    min-height: 100vh;
+}
+
+.card-cont {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 25px; 
+    justify-content: space-around; /* Align cards properly */ 
+}
+
+
+.card {
+    background-color: #F65C44; 
+    border-radius: 8px; 
+    padding: 20px; 
+    flex: 1 1 20%; 
+    min-width: 200px; 
+    min-height: 200px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+
+.title2 p{
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+
+.title3 p{
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.title, .title2, .title3 {
+    background-color:#333333;
+    color: white;
+    height: 30px;
+    width: 90%;
+    margin: 2px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.title3, .title2{
+    margin-bottom: 30px;
+}
+
+.tit-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title p{
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.add-task-but{
+    height:30px;
+    background-color: #333333;
+    border:1px solid white;
+}
+
+
+.greeting{
+    width: 90%;
+    margin:40px auto;
+
+}
+
+.greeting p{
+    padding-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700; 
+    font-size: 30px;
+    color: #B4B4B4;
+    margin: 0;
+}
+
+.date{
+    padding-left: 2.5px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0; 
+}
+
+.all{
+    background-color: rgba(255, 230, 150, 0.4);  
+}
+
+.inprog{
+    background-color: rgba(255, 120, 100, 0.4);
+}
+
+.completed{
+    background-color: rgba(200, 190, 230, 0.4);
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center; 
+    align-items: center; 
+    transition: opacity 0.3s ease; 
+}
+
+.modal-content {
+    background-color: #252525;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin: auto;
+    padding: 20px;
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    width: 90%; 
+    height: auto;
+    max-width: 600px; 
+    animation: slideIn 0.3s ease; 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px); 
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+.close {
+    color: #FFD966;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #333; 
+    color: white; 
+    transition: background-color 0.3s ease; 
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    background-color: #444; 
+    outline: none; 
+}
+
+input[type="submit"] {
+    background-color: #FFD966; 
+    color: #252525; /* Change text color */
+    padding: 10px; 
+    border: none;
+    border-radius: 5px; /* Round corners */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #FFC300; /* Change color on hover */
+}
+
+select {
+    padding-right: 30px; /* Add padding to prevent text from overlapping the arrow */
+}
+
+
+/* Style for date input icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white; /* Change the calendar icon color to white */
+    border-radius: 5px; /* Optional: Round corners of the icon */
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+    display: none; 
+}
+
+.card.all{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Task container styles */
+.tasks-container, .list-inprog, .list-cpmpleted {
+    margin-top: 20px;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    min-height: 150px;
+}
+
+.task {
+    background-color: #333333;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:10px;
+    min-height: 100px; 
+}
+
+.titDiv, .detDiv, .urDiv, .dueDiv, .todoDiv{
+    width: 90%;
+   
+}
+
+.titDiv{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    height: 100%;
+    text-wrap: wrap;
+}
+
+.detDiv{
+    padding-top: 0px;
+    font-family: "Edu AU VIC WA NT Dots", cursive;
+    font-optical-sizing: auto;
+    font-weight:300;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    height: 100%;
+    text-wrap: wrap;
+}
+
+
+#circle{
+    background-color: #B4B4B4;
+    border-radius: 20px;
+    font-size: 12px;
+    padding:5px 10px;
+    margin-bottom: 20px;
+}
+
+.todoDiv{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.edit-but{
+    font-size: 12px;
+    background-color:#B4B4B4 ;
+    border-radius: 100%;
+    height: auto;
+    width:30px;
+    padding:5px 10px;
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    appearance: none; /* Remove default styling */
+    width: 20px; /* Set width */
+    height: 20px; /* Set height */
+    border: 2px solid #B4B4B4; /* Border color */
+    border-radius: 4px; /* Slightly rounded corners */
+    background-color: white; /* Background color */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Positioning for the checkmark */
+    outline: none; /* Remove outline */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #A89FD6;/* Change background color when checked */
+    border-color: none; /* Darker border color when checked */
+}
+
+input[type="checkbox"]:checked::after {
+    content: ''; /* Use a pseudo-element for the checkmark */
+    position: absolute;
+    top: 3px; /* Adjust position */
+    left: 7px; /* Adjust position */
+    width: 6px; /* Width of the checkmark */
+    height: 12px; /* Height of the checkmark */
+    border: solid white; /* Checkmark color */
+    border-width: 0 2px 2px 0; /* Create checkmark shape */
+    transform: rotate(45deg); /* Rotate to form a checkmark */
+    opacity: 1; /* Ensure checkmark is visible */
+}
+
+
+
+.edit-button {
+  background: transparent; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer on hover */
+  height:40px;
+  width:40px;
+  color: #FF4C4C; /* Button color */ 
+  margin-left: 5px; /* Spacing from checkbox */
+}
+
+.edit-button:hover {
+  color: #FF0000; /* Change color on hover */
+}
+
+
+.list-inprog {
+    padding: 0px; /* Increased padding for 'In Progress' state */
+    margin: 0px;  /* Increased margin for 'In Progress' state */
+}
+
+
+
+.avatar{
+    height:50px;
+    width:50px;
+    border-radius: 8px;
+    border:2px solid #FFD966;
+}
+
+#showCalendarButton{
+    width: 95%;
+    height: auto;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #A89FD6; /* Dark, sleek background */
+    color: #FFFFFF; /* White text for readability */
+    border: 2px solid #444444; /* Subtle border for structure */
+    font-size: 12px;
+    margin-top: 35px;
+    margin-left: 5px;
+}
+
+/* Hide sidebar on mobile view */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    /* Adjust main content to take full width when sidebar is hidden */
+    .main {
+        width: 100%;
+    }
+}
+
+/* Style for Hamburger Menu */
+#hamburger {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    font-size: 30px;
+    color: #FFD966;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+/* Mobile styles for the sidebar */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: -100;
+        left: -300px; /* Hide sidebar off-screen */
+        height: 100%;
+        width: 300px;
+        background-color: #252525;
+        transition: left 0.3s ease;
+        z-index: 999; /* Ensure it's above the main content */
+    }
+
+    .sidebar.open {
+        left: 0; /* Move sidebar on screen */
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Show hamburger icon in mobile view */
+    #hamburger {
+        display: block;
+    }
+}

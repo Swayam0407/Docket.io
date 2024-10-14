@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Landing Page -->
+        <div class="landing">
+            <nav>
+                <div class="logo-container">
+                    <img src="./images/logo.png" alt="Docket.io Logo" class="logo-img">
+                    <h1 class="logo">Docket.io</h1>
+                </div>
+                <button class="login-btn" onclick="showLogin()">Login</button>
+            </nav>
+            <div class="landing-content">
+                <div class="image"><img src="./images/mac.png" id="mac"></div>
+                <div class="cont">
+                    <h2>Get Things <span id="done">Done</span>,<br>Stress-Free</h2>
+                    <p>A simple, fun way to track tasks and stay organized.<br> Tick off your to-dos with
+                        ease!<br><br>Create Your Docket now!</p>
+                    <button class="cta" onclick="showLogin()">Get Started <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="features">
+            </div>
+        </div>
+
+
+
+        <!-- Login Page -->
+        <div class="login" id="loginForm" style="display: none;">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form id="loginFormElement">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="loginUsername" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="login-submit">Login</button>
+                    <p class="signup-text">Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Signup Page -->
+        <div class="signup" id="signupForm" style="display: none;">
+            <div class="signup-box">
+                <h2>Sign Up</h2>
+                <form id="signupFormElement">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="signupUsername" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="signup-submit">Sign Up</button>
+                    <p class="signup-text">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="feature-selection">
+            <div class="card">
+                <img src="./images/ui.webp" alt="Moon" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Interactive UI</h3>
+                    <p class="card-desc">Explore a clean and modern interface designed to enhance your productivity.</p>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./images/cal.avif" alt="Flower" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Calendar Support</h3>
+                    <p class="card-desc">Explore a clean and modern interface designed to enhance your productivity.</p>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./images/app.jpg" alt="Jellyfish" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Responsive</h3>
+                    <p class="card-desc">Explore a clean and modern interface designed to enhance your productivity.</p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Footer Section -->
+            <footer>
+                <div class="footer-content">
+                    <div class="developer-icon">
+                        <img src="./images/coding.png" alt="Developer" class="dev-icon">
+                        <p>Developed by <span id="swayam">@swayam_aggarwal</span></p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Swayam0407" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/SwayamAgga1408" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/swayamaggarwal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:swayam04smile.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+    </div>
+
+    <script>
+        function showLogin() {
+            document.querySelector('.landing').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'flex';
+            document.querySelector('.feature-selection').style.display = 'none';
+            document.querySelector('footer').style.display='none';
+        }
+
+        function showSignup() {
+            document.querySelector('.landing').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'flex';
+            document.querySelector('.feature-selection').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
+        }
+
+        // Handle login form submission
+        document.getElementById('loginFormElement').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            fetch('/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.token) {
+                        alert("Login successful! Token: " + data.token);
+                        // Store token in localStorage if needed
+                        localStorage.setItem('token', data.token);
+                        window.location.href = '/todo.html';
+                    } else {
+                        alert("Login failed: " + data.message);
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+
+        // Handle signup form submission
+        document.getElementById('signupFormElement').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message); // Show success or error message
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

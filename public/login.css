@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #1E1E1E;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #2C2C2C;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin-left: 1.5rem;
+}
+
+ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.login-btn {
+    background-color: #FFD700;
+    color: #333;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.landing-content {
+    padding-top: 10vh;
+    height: 70vh; 
+    background: linear-gradient(90deg, #343228 10%, #2C2C2C 80%); /* Subtle Yellow and Prominent Black */
+    background-size: 200% 200%; /* Larger background size for movement */
+    color: #FFF;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: gradientMoveRightToLeft 5s ease-in-out infinite; /* Slowed down for smoother effect */
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    justify-content: left;
+}
+
+/* Animation to make the gradient move from right to left smoothly */
+@keyframes gradientMoveRightToLeft {
+    0% {
+        background-position: 100% 50%; /* Start at the right */
+    }
+    50% {
+        background-position: 0% 50%; /* Move fully to the left */
+    }
+    100% {
+        background-position: 100% 50%; /* Loop back to the right */
+    }
+}
+
+.landing-content h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    margin-left: 200px;
+}
+
+.landing-content p {
+    font-size: 1rem;
+    margin-top: 0; /* Remove top margin */
+    margin-left: 0px; /* Same padding as h2 to align starting letters */
+    margin-bottom: 2rem; /* Keep some bottom margin */
+}
+
+
+
+.cta {
+    background-color: #FFD700;
+    color: #333;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    align-self: flex-start; /* Align to the left */
+    margin-left: 100px; /* Match the left margin of the paragraph */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 2rem; /* Add bottom margin for spacing */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.cta i {
+    margin-left: 0.5rem;
+}
+
+.cta:hover {
+    background-color: #FFC300; /* Optional: Add a hover effect */
+}
+
+/* Login Form */
+.login {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1E1E1E;
+}
+
+.login-box {
+    background-color: #2C2C2C;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 350px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #1E1E1E;
+    color: #FFF;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+.login-submit {
+    width: 100%;
+    background-color: #FFD700;
+    color: #333;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signup-text a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Logo and Navigation Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px; /* Adjust this value based on how big or small you want the logo */
+    height: auto;
+    margin-right: 10px; /* Adds space between the logo and the "Docket.io" text */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.signup {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1E1E1E; /* Same dark background as login */
+}
+
+.signup-box {
+    background-color: #2C2C2C; /* Same dark background as login */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    color: #FFF; /* White text */
+    text-align: center;
+}
+
+.signup-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #FFF; /* Same white text color as login */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888; /* Icon color consistent with login */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #1E1E1E; /* Same background color as login input fields */
+    color: #FFF;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+.input-group input:focus {
+    border-color: #FFD700; /* Same focus color as login input fields */
+}
+
+.signup-submit {
+    width: 100%;
+    background-color: #FFD700; /* Same yellow button as login */
+    color: #333;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signup-text a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Back Button Styling */
+.back-btn {
+    background-color: #444; /* Dark gray background */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #666;
+}
+
+#mac{
+    height:500px;
+    width:1000px;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Feature Selection Styles */
+.feature-selection {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    justify-content: space-evenly; /* Center the cards */
+}
+
+.card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    color:white;
+    width: 400px; /* Set a fixed width for all cards */
+    height: 300px; /* Set a fixed height for all cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    gap:0px;
+    flex-direction: column;
+    justify-content: space-between; /* Make sure content is spaced */
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure the images fit nicely within the card */
+    border-radius: 15px 15px 0 0;
+    opacity: 50%;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center; /* Center text content */
+    justify-content: top;
+}
+
+.card-content p{
+    font-size: 14px;
+    opacity: 60%;
+}
+
+.card-title {
+    font-size: 1.4rem; /* Slightly larger font size */
+    font-weight: 700; /* Increase font weight for a bold effect */
+    letter-spacing: 1px; /* Add letter spacing for a modern feel */
+    margin-bottom: 10px;
+    color:white;
+    opacity: 60%;
+}
+
+.card-title:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 30px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    height: 30px;
+    width:30px;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Color change on hover */
+}
+
+.developer-icon {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.dev-icon {
+    width: 30px;
+    height: 30px;
+    animation: move 4s ease-in-out infinite;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.developer-icon p {
+    font-size: 12px;
+    color: black; /* Adjust text color if needed */
+    font-family: 'Inter', sans-serif; /* Ensure font consistency */
+}
+
+
+
+/* Keyframe animation to move the developer icon */
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Styling for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .dev-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+#swayam{
+    color:#FFD700;
+}
+
+#done{
+    background-image: url("./images/download.png");
+    background-size: 190px 90px; /* Adjust the size to fit the text */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the image behind the text */
+    display: inline-block; /* Ensure the background image stays within the span */
+    color: inherit; /* Keep the text color as it is */
+}
+
