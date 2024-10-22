@@ -476,3 +476,66 @@ footer {
     color: inherit; /* Keep the text color as it is */
 }
 
+
+
+/* Upcoming Features Section */
+.upcoming {
+    margin-top: 50px;
+    width: 93.5%;
+    padding: 40px;
+    text-align: center;
+    background-color: #222121; /* Subtle gradient for the section */
+    border-radius: 20px; /* Rounded borders for the entire section */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.futuretit {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 30px;
+}
+
+.futurefeat {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #2C2C2C;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.feature-icon-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.feature-icon-title i {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.feature-desc {
+    font-size: 1rem;
+    color: #AAA;
+    margin-top: 10px;
+    opacity: 80%;
+}
