@@ -16,6 +16,19 @@ Welcome to **Docket.io**, your ultimate task management and calendar application
 - View your tasks in the calendar and manage them easily.
 - Enjoy the quirky avatars and a welcoming greeting based on the time of day!
 
+
+## Run Locally
+
+1. Clone the repo
+```
+clone https://github.com/Swayam0407/Docket.io
+```
+
+2. Run backend
+```
+node index.js
+```
+
 ## How It Works 🛠️
 Docket.io utilizes modern web technologies to provide a seamless experience:
 
