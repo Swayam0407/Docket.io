@@ -2,14 +2,6 @@
 
 Welcome to **Docket.io**, your ultimate task management and calendar application! Designed with a user-friendly interface, Docket.io helps you manage your tasks effortlessly while keeping track of important dates. Whether you're a student, a professional, or someone who just loves being organized, Docket.io has got you covered!
 
-## Table of Contents
-- [Features](#features)
-- [Usage](#usage)
-- [How It Works](#how-it-works)
-- [Technologies Used](#technologies-used)
-
-
-
 ## Features 🌟
 - **User Authentication**: Secure login to keep your data safe.
 - **Task Management**: Add, edit, and delete tasks with ease.
