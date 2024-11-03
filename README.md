@@ -32,13 +32,13 @@ Docket.io utilizes modern web technologies to provide a seamless experience:
 
 ## Screenshots 📸
 
-<img width="1668" alt="Screenshot 2024-11-04 at 12 00 30 AM" src="https://github.com/user-attachments/assets/e30ac354-eb84-433e-845b-19e26675c623">
+<img width="1668" alt="Screenshot 2024-11-04 at 12 00 30 AM" src="https://github.com/user-attachments/assets/e30ac354-eb84-433e-845b-19e26675c623"><br>
 
 
-<img width="1680" alt="Screenshot 2024-10-13 at 3 25 07 PM" src="https://github.com/user-attachments/assets/4a549c20-d745-402c-a45d-32935b41bae2">
+<img width="1680" alt="Screenshot 2024-10-13 at 3 25 07 PM" src="https://github.com/user-attachments/assets/4a549c20-d745-402c-a45d-32935b41bae2"><br>
 
 
-<img width="1668" alt="Screenshot 2024-11-04 at 12 01 58 AM" src="https://github.com/user-attachments/assets/b5964e73-5106-4c0b-b69e-6d8f926ad621">
+<img width="1668" alt="Screenshot 2024-11-04 at 12 01 58 AM" src="https://github.com/user-attachments/assets/b5964e73-5106-4c0b-b69e-6d8f926ad621"><br>
 
 
 <img width="546" alt="Screenshot 2024-10-13 at 6 47 06 PM" src="https://github.com/user-attachments/assets/582dbcd1-5d29-41ef-82c2-beb8c925cf03">
