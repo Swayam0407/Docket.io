@@ -17,7 +17,7 @@ Welcome to **Docket.io**, your ultimate task management and calendar application
 - Enjoy the quirky avatars and a welcoming greeting based on the time of day!
 
 
-## Run Locally
+## Run Locally 🚀
 
 1. Clone the repo
 ```
